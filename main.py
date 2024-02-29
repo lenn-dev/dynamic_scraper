@@ -1,3 +1,9 @@
+# keywords 리스트를 받아서 각각의 keyword에 대해 검색하게 만들고
+# 모든 코드를 function 안에 넣어 기능하게끔 리팩토링 할것
+# 또 결과물이 담길 csv파일 이름이 각각의 keyword에 맞게 변경될 것
+# 객체지향프로그래밍을 적용시켜 볼것
+# keywords = ["flutter","javascript","python"]
+
 
 from playwright.sync_api import sync_playwright
 import time 
