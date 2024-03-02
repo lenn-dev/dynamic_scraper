@@ -1,0 +1,36 @@
+<!-- vscode html 자동완성 단축키 shift + ! + tab-->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <title>Job scrapper</title>
+      <!-- css 자동으로 예쁘게 꾸며주는 사이트 picocss -->
+      <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+/>
+   </head>
+   <body>
+      <!-- picocss 사용시에 중앙정렬해주는 태그 -->
+    <main class="container">
+      <!-- name= 'lenn' 은 백엔드 python 에서 전달되고 있음 -->
+    <!-- <h1>Hello to you! Your name is {{name}}</h1> -->
+    <h1>What job do you want?</h1>
+    <!-- form을 작성하고 브라우저에서 input창에 keyword를 넣으면 브라우저 주소창이 바뀌는데 -->
+    <!-- 인자로 보낸 name 과 검색어로 넣은 단어가 주소창 url에 추가됨 -->
+    <!-- 키워드 입력후 enter눌렀을때 다른페이지로 이동할때 form action을 씀 -->
+    <!-- form action에 추가한 주소로 이동, url에 추가됨 -->
+    <!-- form 태그는 default로 method="get" 가지고 있어서-->
+    <!-- url 에 있는 input 값들에 대해 우리가 접근할 수 있음 -->
+    <!-- get은 사용자가 action 으로 넣은 페이지로 이동하면  -->
+    <!-- user가 input에 넣은 모든 value를 url 에 넣게됨-->
+    <form action="/search">
+        <input type="text" name="keyword" placeholder="Write keyword please"/>
+        <button>Search</button>
+    </main>
+    </form>
+   </body>
+</html>

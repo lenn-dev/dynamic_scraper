@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+/>
+</head>
+
+<body>
+    <main class ="container">
+        <!-- 중괄호 두개 안의 변수를 Flask가 값으로 변환 -->
+        <h1>Search Results for "{{keyword}}" :</h1>
+        <!-- picocss figure태그 안에 넣으면 가로로 스크롤 가능해짐 -->
+        <!-- inspect 창에서 휴대폰 아이콘 클릭하면 demensions를 선택가능하고 -->
+        <!-- 아이폰으로 선택해서 스크롤 하면 동작하는 걸 확인가능 -->
+        <figure>
+            <table role="grid">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- html에서는 실행시키고 싶은 코드 중괄호와 %로 감싸기 (주의:주석안에 이표현 넣으면 에러남) -->
+                    {% for job in jobs %}
+                    <!-- 파이썬 문법job['position']과 다름  -->
+                    <tr>
+                        <td>{{job.position}}</td>
+                        <td>{{job.company}}</td>
+                        <td><a href ="{{job.link}}" target="_blank">Apply now</a></td> 
+                    </tr> 
+                    <!-- for loop 끝내기 -->
+                    {% endfor %}
+                </tbody>
+            </table>
+        </figure>
+    </main>
+</body>
+</html>
