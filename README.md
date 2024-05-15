@@ -1,5 +1,5 @@
 # dynamic_scraper
-## making web scraper using python
+making web scraper using python
 
 ## Implemented features
 
